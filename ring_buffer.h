@@ -17,7 +17,7 @@ struct Ring_buffer {
     size_t base;
     size_t content;
     int (*read)(struct Ring_buffer *rb, void *dbuf, size_t len);
-    int (*write)(struct Ring_buffer *rb, const void *dbuf, size_t len);
+    int (*write)(struct Ring_buffer *rb, const void *sbuf, size_t len);
 };
 
 bool init_rbuf(struct Ring_buffer *rb, uint8_t *buf, size_t size, int mode);
